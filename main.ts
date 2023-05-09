@@ -1,0 +1,10 @@
+let strip = neopixel.create(DigitalPin.P1, 2, NeoPixelMode.RGB_RGB)
+strip.setBrightness(100)
+strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+strip.setPixelColor(1, neopixel.colors(NeoPixelColors.Green))
+strip.show()
+basic.forever(function () {
+    strip.rotate(1)
+    strip.show()
+    basic.pause(100)
+})
